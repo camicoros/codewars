@@ -17,7 +17,7 @@ def digital_root(n):
     while not end:
       result = 0
       while n > 0:
-        result += n%10
+        result += n % 10
         n = n // 10
       n = result
       if n < 10:
@@ -38,5 +38,5 @@ def digital_root_with_str(n):
 def main():
     print(digital_root(493193))
 
-if__name __ == «__main__»:
+if __name__ == "__main__":
     main()
