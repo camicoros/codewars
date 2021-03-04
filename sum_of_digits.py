@@ -35,7 +35,7 @@ def digital_root_with_str(n):
             end = True
     return n
   
-main():
+def main():
     print(digital_root(493193))
 
 if__name __ == «__main__»:
