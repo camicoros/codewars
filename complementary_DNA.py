@@ -31,5 +31,5 @@ def DNA_strand(dna):
 def main():
     print(DNA_strand("ATTGC"))
 
-if__name __ == «__main__»:
+if __name__ == "__main__":
     main()
