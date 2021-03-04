@@ -35,6 +35,6 @@ def main():
     print(song_decoder("AWUBWUBWUBBWUBWUBWUBC"))
     print(song_decoder("AWUBBWUBC")))
 
-if__name __ == «__main__»:
+if __name__ == "__main__":
     main()
     
