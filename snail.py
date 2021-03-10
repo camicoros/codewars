@@ -22,7 +22,7 @@ NOTE 2: The 0x0 (empty matrix) is represented as en empty array inside an array 
 
 def snail(snail_map):
     print("__snail_start__")
-    snail_len = len(snail_map)
+    snail_len = len(snail_map[0])
 
     current_i = 0
     current_j = 0
