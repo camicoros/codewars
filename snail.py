@@ -48,8 +48,12 @@ def snail(snail_map):
                                                           current_i,
                                                           current_j + iteration_len - 1,
                                                           ))
-                current_j = current_j + iteration_len - 1
+                iterations = current_j + iteration_len - 1
+                while current_j <= iterations:
+                    result_list.append(snail_map[current_i][current_j])
+                    current_j += 1
                 current_i += 1
+                current_j -= 1
 
             elif current_action == 1:
                 print('down {} from {}{} to {}{}'.format(iteration_len,
@@ -58,7 +62,11 @@ def snail(snail_map):
                                                          current_i + iteration_len - 1,
                                                          current_j,
                                                          ))
-                current_i = current_i + iteration_len - 1
+                iterations = current_i + iteration_len - 1
+                while current_i <= iterations:
+                    result_list.append(snail_map[current_i][current_j])
+                    current_i += 1
+                current_i -= 1
                 current_j -= 1
 
             elif current_action == 2:
@@ -68,8 +76,12 @@ def snail(snail_map):
                                                          current_i,
                                                          abs(current_j - iteration_len + 1),
                                                          ))
-                current_j = abs(current_j - iteration_len + 1)
+                iterations = abs(current_j - iteration_len + 1)
+                while current_j >= iterations:
+                    result_list.append(snail_map[current_i][current_j])
+                    current_j -= 1
                 current_i -= 1
+                current_j += 1
 
             elif current_action == 3:
                 print('up {} from {}{} to {}{}'.format(iteration_len,
@@ -78,13 +90,18 @@ def snail(snail_map):
                                                        abs(current_i - iteration_len + 1),
                                                        current_j,
                                                        ))
-                current_i = abs(current_i - iteration_len + 1)
+                iterations = abs(current_i - iteration_len + 1)
+                while current_i >= iterations:
+                    result_list.append(snail_map[current_i][current_j])
+                    current_i -= 1
+                current_i += 1
                 current_j += 1
 
             current_action = (current_action + 1) % 4
 
         iteration_len -= 1
-
+         
+    print(result_list)     
     print("__snail_end__\n")
     return result_list
 
